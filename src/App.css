@@ -281,3 +281,11 @@ hr {
         opacity: 1;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .options:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        background-color: rgba(240, 248, 255, 0.274);
+    }
+}
