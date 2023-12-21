@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Preahvihear', sans-serif;
+    transition: filter 0.8s;
+    user-select: none;
+}
+
+#theme-btn {
+    height: 40px;
+    color: #7998df;
+    color: rgb(45, 54, 63);
+    transition: all 0.5s;
+    text-shadow: 2px 2px 10px #262729;
+}
+
+#theme-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#theme-btn:active {
+    transform: scale(0.7) rotate(180deg);
+}
+
+.homeParent {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.homeParent h1 {
+    font-size: 8vmax;
+    padding-top: 23vh;
+}
+
+.appParent {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.quizParent,
+.resultParent {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    padding: 2vh 3vh 2vh 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-logo {
+    position: absolute;
+    top: 1vh;
+    left: 3vw;
+}
+
+.inverted-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.click-start {
+    animation-name: clickBtnAni;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    font-size: 1.8vmax;
+}
+
+.morphism {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.quiz-modal {
+    width: 80%;
+    height: 90%;
+    background: rgba(35, 42, 49, 0.682);
+    box-shadow: 0 0px 32px 0 rgba(0, 0, 0, 0.838);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    color: rgb(34, 40, 47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.modal-header {
+    font-size: 2.2vmax;
+    text-shadow: 0px 0px 5px #576c81;
+}
+
+.modal-question {
+    font-size: 2.5vmax;
+    text-shadow: 0px 0px 5px #576c81;
+    color: rgb(246, 81, 81);
+}
+
+.quiz-modal-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quiz-modal-2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.options {
+    background-color: rgba(240, 248, 255, 0.274);
+    border-radius: 10px;
+    padding: 1%;
+    font-size: 1.4vmax;
+    margin-bottom: 10px;
+    width: 33vmax;
+    align-self: center;
+    word-wrap: break-word;
+    font-weight: 900;
+    transition: all 0.2s;
+
+}
+
+.options:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background-color: rgba(96, 173, 93, 0.488);
+}
+
+.options:active {
+    transform: scale(1);
+    background-color: rgba(240, 248, 255, 0.274);
+}
+
+.quiz-modal-3 {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 10%;
+    align-items: center;
+    gap: 20px;
+}
+
+.highlights {
+    font-size: 1em;
+    outline: none;
+    border: none;
+    padding: 3%;
+    border-radius: 15px;
+    background-color: rgb(178, 211, 239, 0.649);
+    transition: all 0.4s;
+}
+
+.highlights:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.highlights:active {
+    transform: scale(1);
+    background-color: rgb(178, 211, 239);
+}
+
+#highlight {
+    text-shadow: 0px 0px 10px red;
+    transition: all 0.5s;
+}
+
+.result-modal {
+    width: 60%;
+    height: 75%;
+    box-shadow: 0 0px 32px 0 rgba(0, 0, 0, 0.838);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    color: rgb(34, 40, 47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-shadow: 0px 0px 5px #576c81;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-modal-2 {
+    width: 75%;
+    font-size: 1.5vmax;
+
+}
+
+.result-modal-3 {
+    text-align: center;
+    font-size: 1.7vmax;
+}
+
+hr {
+    border: 2px solid rgb(34, 40, 47);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.restart-btn {
+    font-size: 1vmax;
+    outline: none;
+    border: none;
+    padding: 1%;
+    border-radius: 15px;
+    background-color: rgb(178, 211, 239, 0.649);
+    transition: all 0.2s;
+}
+
+.restart-btn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.restart-btn:active {
+    transform: scale(1);
+    background-color: rgb(178, 211, 239);
+}
+
+@keyframes clickBtnAni {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
